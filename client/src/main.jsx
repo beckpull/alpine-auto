@@ -16,7 +16,7 @@ const client = new ApolloClient({
   link: new HttpLink({
     uri: process.env.NODE_ENV === 'development' 
       ? 'http://localhost:3001/graphql' 
-      : 'https://usa.alpineauto.xyz/graphql',
+      : 'https://deploy-preview-49--alpineautosales.netlify.app/graphql',
     credentials: 'include',
   }),
   cache: new InMemoryCache(),
