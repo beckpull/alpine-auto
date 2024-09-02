@@ -16,8 +16,8 @@ const client = new ApolloClient({
   link: new HttpLink({
     uri: process.env.NODE_ENV === 'development'
       ? 'http://localhost:3001/graphql'  // Local development
-      : process.env.DEPLOY_URL            // Netlify main app or deploy preview
-        ? `${process.env.DEPLOY_URL}/graphql`
+      : process.env.DEPLOYED_URL            // Netlify main app or deploy preview
+        ? `${process.env.DEPLOYED_URL}/graphql`
         : 'https://deploy-preview-49--alpineautosales.netlify.app/graphql',  // Production
     credentials: 'include',
   }),
