@@ -40,7 +40,7 @@ const startApolloServer = async () => {
   app.use(express.urlencoded({ extended: false }));
   app.use(express.json());
   const corsOptions = {
-    origin: ['http://localhost:5174', 'https://usa.alpineauto.xyz'], // Allow both development / Production
+    origin: ['http://localhost:5174', '*, https://main--alpineautosales.netlify.app'], // Allow both development / Production
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Methods allowed
     allowedHeaders: ['Content-Type', 'Authorization'], // Allow these headers
     credentials: true, // Allow the use of cookis and authorization headers
