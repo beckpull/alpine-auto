@@ -71,7 +71,7 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use('/images', (req, res, next) => {
   console.log('Serving request for image:', req.path);
   next();
-}, express.static(path.join(__dirname, '../client/dist/images')));
+}, express.static(path.join(__dirname, '../client/public/images')));
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/dist/index.html'));
