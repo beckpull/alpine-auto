@@ -23,7 +23,7 @@ const client = new ApolloClient({
   }),
   cache: new InMemoryCache(),
 });
-D
+
 const router = createBrowserRouter([
   {
     path: '/',
