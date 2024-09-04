@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => {
       port: 5174,
       proxy:{
         '/graphql': {
-          // target: 'http://localhost:3001',
+          target: 'http://localhost:3001',
           changeOrigin: true,
           secure: false,
         },
