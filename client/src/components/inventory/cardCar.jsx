@@ -57,7 +57,7 @@ function CarCard() {
                                 {car.images.map((image, index) => (
                                     <div key={index} className="overflow-hidden relative h-full w-full carousel-slide">
                                         <img 
-                                            src={`${import.meta.env.VITE_API_URL}${image}`}   alt="image 1" className="h-96 w-full object-cover" />
+                                            src={`${image}`}   alt="image 1" className="h-96 w-full object-cover" />
                                     </div>
                                 ))}
                             </Carousel>
