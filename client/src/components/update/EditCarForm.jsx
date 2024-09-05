@@ -59,7 +59,7 @@ const EditCarForm = ({ closeModal, refetchCars, carData }) => {
       const formData = new FormData();
       formData.append('file', file);
       try {
-        const response = await axios.post('http://localhost:3001/upload', formData);
+        const response = await axios.post('https://alpine-auto.adaptable.app/upload', formData);
         console.log('File upload response:', response.data); // Debug response
         if (response.data.filePath) {
           uploadedImagePaths.push(response.data.filePath);
