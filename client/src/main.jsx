@@ -18,7 +18,7 @@ const client = new ApolloClient({
       ? 'http://localhost:3001/graphql'  // Local development
       : process.env.DEPLOYED_URL            // Netlify main app or deploy preview
         ? `${process.env.DEPLOYED_URL}/graphql`
-        : */ 'https://alpine-auto.adaptable.app/graphql',  // Production
+        : */ 'https://alpineautosales.netlify.app/graphql',  // Production
     credentials: 'include',
   }),
   cache: new InMemoryCache(),
