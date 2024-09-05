@@ -23,7 +23,7 @@ const ModalCar = ({ isOpen, onClose, carInfo }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50">
-      <div className="bg-white p-4 rounded shadow-lg w-11/12 md:w-9/12 max-h-screen overflow-y-auto relative">
+      <div className="bg-white rounded-lg shadow-lg relative max-w-4xl mx-4 max-h-[80vh] overflow-auto p-6 pt-12">
       <button onClick={onClose} className="bg-white w-7 h-7 border-2 border-red-500 absolute top-4 right-4 text-red-500 hover:bg-red-700 hover:text-gray-400 transition-colors rounded-full pb-2">✕</button>
         <h2 className="text-lg md:text-xl font-bold mb-4 text-center">{carInfo.year} {carInfo.make} {carInfo.model}</h2>
 
