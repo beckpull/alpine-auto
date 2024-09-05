@@ -66,12 +66,18 @@ const startApolloServer = async () => {
   });
 
 
+// app.use(express.static(path.join(__dirname, '../client/dist')));
+
+// app.use('/images', (req, res, next) => {
+//   console.log('Serving request for image:', req.path);
+//   next();
+// }, express.static(path.join(__dirname, '../client/dist/images')));
+
+// Serve static files from the 'client/dist' directory
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
-app.use('/images', (req, res, next) => {
-  console.log('Serving request for image:', req.path);
-  next();
-}, express.static(path.join(__dirname, '../client/dist/images')));
+// Serve static images from the 'client/dist/images' directory
+app.use('/images', express.static(path.join(__dirname, '../client/dist/images')));
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/dist/index.html'));
