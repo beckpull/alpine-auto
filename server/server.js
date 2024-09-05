@@ -40,9 +40,9 @@ const startApolloServer = async () => {
   app.use(express.urlencoded({ extended: false }));
   app.use(express.json());
   const corsOptions = {
-    origin: ['http://localhost:5174', 'https://usa.alpineauto.xyz'], // Allow both development / Production
+    origin: ['http://localhost:5174', 'https://alpine-auto.adaptable.app'], // Allow both development / Production
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Methods allowed
-    allowedHeaders: ['Content-Type', 'Authorization'], // Allow these headers
+    allowedHeaders: ['Content-Type', 'Authorization', 'Access-Control-Allow-Origin'], // Allow these headers
     credentials: true, // Allow the use of cookis and authorization headers
   };
   app.use(cors(corsOptions));
@@ -65,13 +65,18 @@ const startApolloServer = async () => {
     res.send({ filePath: imageUrl });
   });
 
+// app.use(express.static(path.join(__dirname, '../client/dist')));
 
+// app.use('/images', (req, res, next) => {
+//   console.log('Serving request for image:', req.path);
+//   next();
+// }, express.static(path.join(__dirname, '../client/dist/images')));
+
+// Serve static files from the 'client/dist' directory
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
-app.use('/images', (req, res, next) => {
-  console.log('Serving request for image:', req.path);
-  next();
-}, express.static(path.join(__dirname, '../client/dist/images')));
+// Serve static images from the 'client/dist/images' directory
+app.use('/images', express.static(path.join(__dirname, '../client/dist/images')));
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/dist/index.html'));
@@ -83,6 +88,6 @@ db.once('open', () => {
   });
 });
 }
-
+6
 // Call the async function to start the server
 startApolloServer();
