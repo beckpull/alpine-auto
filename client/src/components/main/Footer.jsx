@@ -10,8 +10,8 @@ function Footer() {
 
       <AdminLogin />
       
-      <p className="text-center text-gray-800 font-bold text-sm opacity-50">
-        made with love, bp
+      <p className="text-center text-gray-100 font-bold text-sm opacity-50">
+        made with love, bp & sr
       </p>
 
     </footer>
