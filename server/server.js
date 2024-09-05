@@ -61,7 +61,7 @@ const startApolloServer = async () => {
       return res.status(400).send({ message: 'No file uploaded' });
     }
     // Construct a URL for the image
-    const imageUrl = `/images/${req.file.filename}`; // Only keep the relative path after "/images"
+    const imageUrl = `public/images/${req.file.filename}`; // Only keep the relative path after "/images"
     res.send({ filePath: imageUrl });
   });
 
