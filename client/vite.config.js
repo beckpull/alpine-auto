@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => {
       port: 5174,
       proxy:{
         '/graphql': {
-          target: 'https://alpine-auto.adaptable.app',
+          target: 'ttps://alpineautosales.netlify.app',
           changeOrigin: true,
           secure: false,
         },
