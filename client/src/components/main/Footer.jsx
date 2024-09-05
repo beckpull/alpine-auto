@@ -11,7 +11,7 @@ function Footer() {
       <AdminLogin />
       
       <p className="text-center text-gray-100 font-bold text-sm opacity-50">
-        made with love, bp
+        made with love, bp & sr
       </p>
 
     </footer>
