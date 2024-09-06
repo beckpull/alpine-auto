@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 import { Carousel } from "@material-tailwind/react";
 
 
@@ -71,7 +71,7 @@ function CarCard() {
                             {car.description ? (
                                 <CardDescription >
                                     <div className="flex items-center">
-                                        <FontAwesomeIcon icon={faExclamationCircle} className="hiddenIcon mr-2 h-4 w-4 opacity-70" />
+                                        {/* <FontAwesomeIcon icon={faExclamationCircle} className="hiddenIcon mr-2 h-4 w-4 opacity-70" /> */}
                                         <span className="text-sm md:text-base text-left text-muted-foreground tracking-wide sm:ml-0.5">
                                             {car.description}
                                         </span>
